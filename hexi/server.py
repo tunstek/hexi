@@ -2,15 +2,22 @@ import logging
 import logging.config
 import sys
 import asyncio
-import uvloop
 import signal
 import sanic.config
 
 from hexi.util import taillog
 
+try:
+    import uvloop  # type: ignore
+
+    if not isinstance(asyncio.get_event_loop_policy(), uvloop.EventLoopPolicy):
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+except ImportError:
+    pass
+
+
 _logger = logging.getLogger(__name__)
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 loop = asyncio.get_event_loop()
 signal.signal(signal.SIGINT, lambda s, f: loop.stop())
 
