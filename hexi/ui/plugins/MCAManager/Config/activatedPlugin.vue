@@ -1,11 +1,11 @@
 <template>
   <ui-section-container key="page-mca-manager-config-activated-plugin" v-loading.body="loading">
-    <ui-section title="选择体感模拟算法" width="300px">
+    <ui-section title="Select Algorithm" width="300px">
       <ui-section-content>
-        以下是当前已安装的体感模拟算法，请选择一项。
+       Currently Installed:
       </ui-section-content>
       <ui-section-content>
-        <el-button type="primary" :disabled="!hasChanged || loading" @click="handleSave">保存</el-button>
+        <el-button type="primary" :disabled="!hasChanged || loading" @click="handleSave">Save</el-button>
       </ui-section-content>
       <ui-section-content extend>
         <ui-plugin-list

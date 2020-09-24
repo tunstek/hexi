@@ -10,8 +10,8 @@
             </el-select>
           </el-form-item>
           <el-form-item>
-            <el-button @click="submit()">保存</el-button>
-            <el-button @click="cancel()">取消</el-button>
+            <el-button @click="submit()">Save</el-button>
+            <el-button @click="cancel()">Cancel</el-button>
           </el-form-item>
         </el-form>
       </ui-section-content>

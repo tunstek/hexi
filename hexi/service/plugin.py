@@ -32,11 +32,11 @@ async def get_plugins(request):
 
 def init():
   web.app.blueprint(bp)
-  pm.setPluginPlaces(['./plugins'])
+  pm.setPluginPlaces([os.path.normpath('../plugins')])
   pm.setPluginInfoExtension('plugin')
 
 def load():
-  pm.setCategoriesFilter(plugins_filter)
+  #pm.setCategoriesFilter(plugins_filter)
   pm.collectPlugins()
   for plugin in pm.getAllPlugins():
     try:

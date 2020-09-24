@@ -1,6 +1,11 @@
 import asyncio
 import collections
 import json
+import sys
+import traceback
+import concurrent
+
+from sanic.log import logger
 
 
 class WebSocketPipingDeque(collections.deque):
@@ -18,8 +23,11 @@ class WebSocketPipingDeque(collections.deque):
         self.pipe(ws)
         while True:
           await ws.recv()
+      except concurrent.futures._base.CancelledError:
+          logger.info('*** Attention! A task has been canceled. It is not clear if this is intended. This may require further investigation..')
       finally:
         self.unpipe(ws)
+
 
   async def flush_async(self):
     while True:

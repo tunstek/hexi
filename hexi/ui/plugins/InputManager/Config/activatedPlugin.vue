@@ -1,11 +1,11 @@
 <template>
   <ui-section-container key="page-input-manager-config-activated-plugin" v-loading.body="loading">
-    <ui-section title="选择输入信号源" width="300px">
+    <ui-section title="Input Manager" width="300px">
       <ui-section-content>
-        以下是当前可用的输入信号源，请选择一项作为输入信号。
+        Available Input Signal Sources:
       </ui-section-content>
       <ui-section-content>
-        <el-button type="primary" :disabled="!hasChanged || loading" @click="handleSave">保存</el-button>
+        <el-button type="primary" :disabled="!hasChanged || loading" @click="handleSave">Save</el-button>
       </ui-section-content>
       <ui-section-content extend>
         <ui-plugin-list
@@ -23,7 +23,7 @@
     </transition>
   </ui-section-container>
 </template>
-
+ 
 <script>
 import API from '@core/utils/api';
 

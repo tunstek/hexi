@@ -1,13 +1,13 @@
 <template>
   <ui-section-container key="page-mca-manager-config">
-    <ui-section title="体感模拟" width="300px">
+    <ui-section title="MCA Manager" width="300px">
       <ui-section-content extend>
         <ui-menu-list>
           <ui-menu-list-item :href="{ name: 'hexiMCAManagerConfigActivatedPlugin' }">
-            <i class="fa fa-code" aria-hidden="true"></i> 体感模拟算法
+            <i class="fa fa-code" aria-hidden="true"></i> Algorithm
           </ui-menu-list-item>
           <ui-menu-list-item :href="{ name: 'hexiMCAManagerConfigLogs' }">
-            <i class="fa fa-bug" aria-hidden="true"></i> 信号调试
+            <i class="fa fa-bug" aria-hidden="true"></i> MCA Logs
           </ui-menu-list-item>
         </ui-menu-list>
       </ui-section-content>

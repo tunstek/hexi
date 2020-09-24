@@ -1,20 +1,20 @@
 <template>
   <ui-section-container key="page-input-fsx-plugin-config-data-options" v-loading.body="loading">
-    <ui-section title="数据监听配置" width="300px">
+    <ui-section title="Data Source Config" width="300px">
       <ui-section-content>
         <el-form ref="form" :model="data" label-position="top">
-          <el-form-item key="tcp_host" label="FSX 主机 IP 地址">
+          <el-form-item key="tcp_host" label="TCP Host">
             <el-input v-model="data.tcp_host"></el-input>
           </el-form-item>
-          <el-form-item key="tcp_port" label="FSX 主机连接端口">
+          <el-form-item key="tcp_port" label="TCP Port">
             <el-input v-model="data.tcp_port"></el-input>
           </el-form-item>
-          <el-form-item key="udp_port" label="本地数据端口">
+          <el-form-item key="udp_port" label="UDP Port">
             <el-input v-model="data.udp_port"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button @click="submit()">保存</el-button>
-            <el-button @click="cancel()">取消</el-button>
+            <el-button @click="submit()">Save</el-button>
+            <el-button @click="cancel()">Cancel</el-button>
           </el-form-item>
         </el-form>
       </ui-section-content>

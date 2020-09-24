@@ -18,8 +18,13 @@ app.blueprint(bp)
 
 
 async def on_start(e):
-  server = app.create_server(host='0.0.0.0', port=8000, log_config=None)
-  asyncio.ensure_future(server)
+  #app.run(host='0.0.0.0', port=8000, access_log=False)
+  #server = app.create_server(host='0.0.0.0', port=8000)
+  #asyncio.ensure_future(server)
+  server = app.create_server(host="0.0.0.0", port=8000, return_asyncio_server=True)
+  loop = asyncio.get_event_loop()
+  task = asyncio.ensure_future(server)
+  #loop.run_forever()
 
 
 def init():

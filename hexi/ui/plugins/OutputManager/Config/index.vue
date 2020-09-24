@@ -1,10 +1,10 @@
 <template>
   <ui-section-container key="page-output-manager-config">
-    <ui-section title="输出信号" width="300px">
+    <ui-section title="Output Manager" width="300px">
       <ui-section-content extend>
         <ui-menu-list>
           <ui-menu-list-item :href="{ name: 'hexiOutputManagerConfigActivatedPlugin' }">
-            <i class="fa fa-bullhorn" aria-hidden="true"></i> 目标平台
+            <i class="fa fa-bullhorn" aria-hidden="true"></i> Target Platform
           </ui-menu-list-item>
         </ui-menu-list>
       </ui-section-content>

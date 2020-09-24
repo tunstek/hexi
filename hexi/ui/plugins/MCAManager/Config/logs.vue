@@ -1,8 +1,8 @@
 <template>
   <ui-section-container key="page-mca-manager-config-logs" v-loading.body="loading">
-    <ui-section title="信号调试" width="500px">
+    <ui-section title="MCA Logs" width="500px">
       <ui-section-content>
-        <ui-chart-line v-for="cd in chartData" ref="chart" :width="480" :height="150" :chart-data="cd" :options="chartOptions"></ui-chart-line>
+        <ui-chart-line v-for="cd in chartData" v-bind:key="cd.id" ref="chart" :width="480" :height="150" :chart-data="cd" :options="chartOptions"></ui-chart-line>
       </ui-section-content>
     </ui-section>
   </ui-section-container>
@@ -32,6 +32,7 @@ function buildChartData() {
       labels: rawData[COLUMNS[0]].get(),
       datasets: [
         {
+          id: idx,
           label: key,
           lineTension: 0,
           borderColor: colors[COLORS[idx]],

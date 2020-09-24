@@ -6,7 +6,7 @@ export default class UiInputManagerPlugin {
       path: '/core/inputManager/config',
       component: require('./Config/index.vue'),
       meta: {
-        title: '输入信号',
+        title: 'Config',
       },
     });
     routes.push({
@@ -15,7 +15,7 @@ export default class UiInputManagerPlugin {
       path: '/core/inputManager/config/activatedPlugin',
       component: require('./Config/activatedPlugin.vue'),
       meta: {
-        title: '选择输入信号源',
+        title: 'Activated Plugins',
       },
     });
     routes.push({
@@ -24,7 +24,7 @@ export default class UiInputManagerPlugin {
       path: '/core/inputManager/config/logs',
       component: require('./Config/logs.vue'),
       meta: {
-        title: '信号调试',
+        title: 'Logs',
       },
     });
   }
@@ -33,7 +33,7 @@ export default class UiInputManagerPlugin {
     menus.push({
       name: 'hexiInputManagerConfig',
       index: '/core/inputManager/config',
-      title: '输入信号',
+      title: 'Input Manager',
     });
   }
 }

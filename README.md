@@ -82,6 +82,11 @@ cd hexi/plugins/output_stewart_visualize
 npm start
 ```
 
+Now start a mongodb instance:
+```bash
+docker run --name mongodb -v mongodata:/data/db -d -p 27017:27017 mongo
+```
+
 Finally, you can start the Hexi server now:
 
 ```bash

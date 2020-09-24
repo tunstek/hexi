@@ -6,7 +6,7 @@ export default class UiMCAManagerPlugin {
       path: '/core/mcaManager/config',
       component: require('./Config/index.vue'),
       meta: {
-        title: '体感模拟',
+        title: 'MCA Manager',
       },
     });
     routes.push({
@@ -15,7 +15,7 @@ export default class UiMCAManagerPlugin {
       path: '/core/mcaManager/config/activatedPlugin',
       component: require('./Config/activatedPlugin.vue'),
       meta: {
-        title: '选择体感模拟算法',
+        title: 'Select Algorithm',
       },
     });
     routes.push({
@@ -24,7 +24,7 @@ export default class UiMCAManagerPlugin {
       path: '/core/mcaManager/config/logs',
       component: require('./Config/logs.vue'),
       meta: {
-        title: '信号调试',
+        title: 'MCA Logs',
       },
     });
   }
@@ -33,7 +33,7 @@ export default class UiMCAManagerPlugin {
     menus.push({
       name: 'hexiMCAManagerConfig',
       index: '/core/mcaManager/config',
-      title: '体感模拟',
+      title: 'MCA Manager',
     });
   }
 }
